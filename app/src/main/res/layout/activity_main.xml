@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <!-- Local label -->
+        <TextView
+            android:id="@+id/tvLocalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/local_label"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Local score -->
+        <TextView
+            android:id="@+id/localScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toEndOf="@id/tvLocalLabel"
+            android:layout_marginStart="12dp"/>
+
+        <!-- Local buttons -->
+        <LinearLayout
+            android:id="@+id/localButtons"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button android:id="@+id/btnLocalPlus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus1"
+                android:backgroundTint="@color/naranja"/>
+
+            <Button android:id="@+id/btnLocalPlus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus2"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/naranja"/>
+
+            <Button android:id="@+id/btnLocalMinus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus1"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/naranja"/>
+        </LinearLayout>
+
+        <!-- Reset button -->
+        <TextView
+            android:id="@+id/ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="vs"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.334"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/localScore"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:contentDescription="@string/reset_desc"
+            app:layout_constraintEnd_toStartOf="@id/ball"
+            app:layout_constraintBaseline_toBaselineOf="@id/ball"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/naranja"/>
+
+        <!-- Results button -->
+        <Button
+            android:id="@+id/btnResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="resutado"
+            android:contentDescription="@string/go_to_result"
+            app:layout_constraintStart_toEndOf="@id/ball"
+            app:layout_constraintBaseline_toBaselineOf="@id/ball"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/naranja"/>
+
+        <!-- Visitor score -->
+        <TextView
+            android:id="@+id/visitorScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ball"
+            app:layout_constraintStart_toStartOf="@id/localScore"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Visitor buttons -->
+        <LinearLayout
+            android:id="@+id/visitorButtons"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/localButtons"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnVisitorPlus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus1"
+                android:backgroundTint="@color/naranja"/>
+
+            <Button android:id="@+id/btnVisitorPlus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus2"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/naranja"/>
+
+            <Button android:id="@+id/btnVisitorMinus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus1"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/naranja"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVisitanteLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/visitante_label"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/visitorScore"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
