@@ -11,11 +11,18 @@ Una aplicación Android simple e intuitiva para llevar el marcador de partidos d
 - **Data Binding**: Implementación moderna usando Android Data Binding
 - **Interfaz responsive**: Diseño con ConstraintLayout adaptable
 
-## 🎯 Capturas de pantalla
+## 📸 Capturas de pantalla
 
-```
+<div align="center">
+  <img src="Screenshots/pantalla_principal.png" width="300" alt="Main Screen"/>
+  <p><em>Pantalla principal con el marcador</em></p>
+</div>
 
-```
+
+<div align="center">
+  <img src="Screenshots/resultado_final.png" width="300" alt="Score Screen"/>
+  <p><em>Pantalla de resultado final</em></p>
+</div>
 
 ## 🏗️ Arquitectura del proyecto
 
